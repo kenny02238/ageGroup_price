@@ -72,6 +72,7 @@
 - PriceInput：
 
   - 在此將正則及狀態管理複雜邏輯抽出給 usePriceInput custom hook 處理
+  - 依照第一題邏輯輸入匡可接受負數的輸入
 
 - InputBox：
   - 負責輸入匡 UI
