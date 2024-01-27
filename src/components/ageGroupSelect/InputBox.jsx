@@ -18,7 +18,7 @@ const InputBox = ({ index }) => {
         <div
           className={cn(
             "flex justify-center items-center h-[60px] w-[10%]",
-            "border-y-[2px] bg-[#F5F5F5] border-[#E0E0E0]"
+            "border-y-[2px] bg-[#F5F5F5] border-[#E0E0E0] cursor-default"
           )}
         >
           ~

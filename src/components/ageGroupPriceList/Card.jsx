@@ -9,7 +9,7 @@ const Card = ({ index }) => {
   return (
     <div className="flex flex-col gap-7 mb-[40px]">
       <div className="text-xl text-[#616161] flex justify-between">
-        <div>{`價格設定 - ${index + 1}`}</div>
+        <div className="cursor-default">{`價格設定 - ${index + 1}`}</div>
         {index !== 0 && (
           <div
             className="flex text-[#F83C00] cursor-pointer group"
