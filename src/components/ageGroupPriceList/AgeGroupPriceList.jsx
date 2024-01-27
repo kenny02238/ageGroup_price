@@ -17,13 +17,13 @@ const AgeGroupPriceList = ({ onChange }) => {
     onChange(value);
   }, [value, onChange]);
   return (
-    <div className="w-[60%] flex flex-col ">
+    <div className="w-[60%] flex flex-col">
       {value.map((_, index) => {
         return <Card key={index} index={index} />;
       })}
       <div
         className={cn(
-          "flex items-center text-[#2EB2A1] cursor-pointer group",
+          "flex items-center text-[#2EB2A1] cursor-pointer group flex-grow-0 max-w-[max-content]",
           allInclude && "invisible"
         )}
         onClick={addNewItem}
