@@ -7,7 +7,7 @@ const AgeInput = ({ direction, ageGroup, setAgeGroup, index }) => {
   const containerRef = useRef(null);
   const range = direction === "min" ? ageGroup[1] + 1 : 20 - ageGroup[0] + 1;
 
-  //處理點擊input外的事件
+  // 處理點擊input外的事件
   useEffect(() => {
     const handleOutsideClick = (event) => {
       if (
@@ -17,7 +17,7 @@ const AgeInput = ({ direction, ageGroup, setAgeGroup, index }) => {
         setIsShow(false);
       }
     };
-    document.addEventListener("click", handleOutsideClick);
+    document.addEventListener("click", handleOutsideClick, { capture: true });
 
     return () => {
       document.removeEventListener("click", handleOutsideClick);
@@ -57,6 +57,7 @@ const AgeInput = ({ direction, ageGroup, setAgeGroup, index }) => {
             <ChevronDown className="h-7 w-7 text-[#999999]/[.9] stroke-[1px]" />
           )}
         </div>
+
         <div
           className={cn(
             "absolute top-[60px] max-h-[200px] w-full overflow-scroll bg-[#F5F5F5]",
